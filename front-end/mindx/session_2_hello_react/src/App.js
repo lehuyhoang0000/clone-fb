@@ -1,4 +1,10 @@
 import './App.css';
+import './NameCard.css'
+import NameCard from "./NameCard.js";
+import Card from './Card';
+
+const age = Math.floor(Math.random() * 50);
+// const data = {address: "HaNoi"}
 
 function App() {
   return (
@@ -11,26 +17,30 @@ function App() {
           <ListName title="Jogging" />
           <ListName title="Leart React" />
           <ListName title="Doing Exercies" />
+          {/* <div>{JSON.stringify(data)}</div> */}
         </div>
-        <NameCard name="Hoang" age="23" />
-        <NameCard name="Hướng" age="21" />
-        <NameCard name="Hề" age="22" />
-        <NameCard name="Hoang" age="23" />
+        <Card>
+          <NameCard name="Hoang" age={age} address="Hà nội"> <div>This is bug</div> </NameCard>
+          <NameCard name="Hướng" age={21} address="Hà nội"> <div>This is bug123</div> </NameCard>
+          <NameCard name="Hề" age="22" address="Hà nội" />
+          <NameCard name="Hoang" age="23" address="Hà nội" />
+          <div style={{
+            // backgroundColor: '#FFFFFF',
+            // color: '#000',
+            fontWeight: 'bold',
+            fontStyle: 'italic'
+          }}>
+            Today is {new Date().getDate()}
+          </div>
+        </Card>
       </header>
     </div>
   );
 }
 
-function NameCard(props) {
-  return (
-    <div className="card">
-      <div className="name">Name: {props.name} </div>
-      <div className="age">Age: {props.age} </div>
-    </div>
-  )
-};
 
-function ListName(props){
+
+function ListName(props) {
   return (
     <ul>
       <li>{props.title}</li>
