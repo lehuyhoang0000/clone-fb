@@ -1,0 +1,135 @@
+.perfor-chart {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  .perfor-header {
+    display: flex;
+
+    .chart-date {
+      display: flex;
+      margin-left: 4px;
+
+      .chart-account {
+        width: 96px;
+        height: 24px;
+        margin-right: 4px;
+      }
+
+      .chart-account-according {
+        width: 130px;
+        height: 24px;
+        margin-right: 4px;
+      }
+    }
+
+    .searching-btn {
+      margin-left: 4px;
+      margin-top: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0px 16px;
+      gap: 8px;
+      width: 95px;
+      height: 36px;
+      border-radius: 8px;
+      background: #0749AC;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: 0.2px;
+      color: #EDF2F7;
+    }
+
+    .searching-btn-reaload {
+      margin-left: 16px;
+      margin-top: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0px 16px;
+      gap: 8px;
+      width: 95px;
+      height: 36px;
+      border-radius: 8px;
+      border: 1px solid #0749AC;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: 0.2px;
+      color: #EDF2F7;
+    }
+  }
+
+  .period {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    // width: calc(50% - 24px);
+    // margin-left: calc(50% + 24px);
+    .btn-period {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0px 8px;
+      gap: 4px;
+      height: 16px;
+      background: #2D3748;
+      color: #A0AEC0;
+      border-radius: 32px;
+      margin: 0 4px;
+
+      svg {
+        path {
+          color: #edf2f7;
+        }
+      }
+    }
+  }
+
+  .chart-tb {
+    margin-top: 6px;
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      font-style: normal;
+      font-weight: 400;
+      font-size: 9px;
+      line-height: 12px;
+      letter-spacing: 0.2px;
+      color: #A0AEC0;
+
+      .grid-name {
+        width: 226px;
+        height: 18px;
+        flex-direction: row;
+        align-items: center;
+        padding: 2px 4px;
+        border: 0.2px solid #2D3748;
+        background-color: #090E1A;
+      }
+
+      .grid-price {
+        text-align: right;
+        width: 226px;
+        height: 18px;
+        flex-direction: row;
+        padding: 2px 4px;
+        border: 0.2px solid #2D3748
+      }
+    }
+  }
+
+  .chart {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 4px;
+    gap: 40px;
+    width: 898px;
+    height: 534px;
+  }
+}
