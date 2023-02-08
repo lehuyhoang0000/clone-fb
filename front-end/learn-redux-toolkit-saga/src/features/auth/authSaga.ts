@@ -1,6 +1,9 @@
 import { PayloadAction } from '@reduxjs/toolkit';
+import { push } from 'connected-react-router';
+import { Navigate } from 'react-router-dom';
 import { call, delay, fork, put, take } from 'redux-saga/effects';
 import { authActions, LoginPayload } from './authSlice';
+
 
 function* handleLogin(payload: LoginPayload) {
   yield delay(1000)
@@ -12,8 +15,10 @@ function* handleLogin(payload: LoginPayload) {
       authActions.loginSuccess({
         id: 1,
         name: 'Huy Hoang',
+        role:'ADMIN'
       })
     );
+
   } catch (err: any | Error) {
     yield put(authActions.loginFailed(err.message));
     console.log('err')

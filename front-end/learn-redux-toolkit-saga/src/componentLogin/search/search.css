@@ -1,0 +1,34 @@
+.flex-search{
+    display: flex;
+
+}
+.flex-search img{
+    max-width: 40px;
+    max-height: 40px;
+    margin-left: 16px;
+    border-radius: 20px;
+}
+label{
+    border: 1px solid #000;
+    border-radius: 50px;
+    z-index: 1;
+    width: 240px;
+    height: 40px;
+    display: flex;
+}
+input{
+    outline: none;
+    border: none;
+    z-index: 0;
+
+}
+
+.lable-img span{
+    display: flex;
+    align-items: center;
+}
+
+.lable-img img{
+    width: 16px;
+    height: 16px;
+}
